@@ -1,10 +1,10 @@
 import mysql from 'mysql';
 
 const dbConfig = {
-    host: 'localhost',
+    host: process.env.HOST || 'localhost',
     user: process.env.USER_DB || 'root',
     password: process.env.PASSWORD_DB || '',
-    database: 'node_mysql'
+    database: process.env.DATABASE || 'node_mysql'
 }
 
 const connection = mysql.createConnection(dbConfig);

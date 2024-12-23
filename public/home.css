@@ -1,0 +1,30 @@
+.container {
+    margin: 0 48px;
+    padding: 48px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home-txt {
+    position: relative;
+    margin-bottom: 24px;
+    z-index: 1;
+}
+
+.home-txt::before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: orangered;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    top: 0;
+    z-index: -1;
+    left: -8px
+}
+
+.home-pgy {
+    font-size: 1.4rem;
+}

@@ -12,8 +12,4 @@ app.use(express.static(publicDirectory));
 console.log(publicDirectory)
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
-
 export default app;

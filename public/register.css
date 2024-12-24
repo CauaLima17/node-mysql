@@ -1,10 +1,10 @@
-.home-txt {
+.register-txt {
     position: relative;
     margin-bottom: 24px;
     z-index: 1;
 }
 
-.home-txt::before {
+.register-txt::before {
     position: absolute;
     content: '';
     display: block;
@@ -17,6 +17,23 @@
     left: -8px
 }
 
-.home-pgy {
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form label {
     font-size: 1.4rem;
+}
+
+.form input {
+    margin: 8px 0 24px 0;
+    font-size: 1.2rem;
+    padding: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.btn {
+    justify-self: start;
 }

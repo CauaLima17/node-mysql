@@ -33,3 +33,7 @@
     color: #fff;
     background-color: #000;
 }
+
+.header .logo a {
+    font-size: 2rem;
+}

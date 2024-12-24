@@ -21,3 +21,7 @@ img {
 a {
     text-decoration: none;
 }
+
+input {
+    display: block;
+}

@@ -17,6 +17,23 @@
     transition: .3s
 }
 
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form label {
+    font-size: 1.4rem;
+}
+
+.form input {
+    margin: 8px 0 24px 0;
+    font-size: 1.2rem;
+    padding: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+
 .btn:hover {
     background-color: rgb(204, 54, 0);
 }

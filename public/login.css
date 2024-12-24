@@ -1,10 +1,10 @@
-.register-txt {
+.login-txt {
     position: relative;
     margin-bottom: 24px;
     z-index: 1;
 }
 
-.register-txt::before {
+.login-txt::before {
     position: absolute;
     content: '';
     display: block;

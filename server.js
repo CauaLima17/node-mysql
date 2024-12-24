@@ -1,21 +1,12 @@
 import dotenv from 'dotenv';
 import app from "./src/app.js";
+import Routers from './src/routers/pages.js';
 
 dotenv.config({ path: './.env' });
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
-
-app.get('/register', (req, res) => {
-    res.render('register');
-});
-
-app.get('/login', (req, res) => {
-    res.render('login');
-});
+app.use('/', Routers);
 
 app.listen(PORT, () => {
     console.log('Servidor inicializado.');

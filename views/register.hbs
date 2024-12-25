@@ -39,11 +39,15 @@
             </div>
             <div>
                 <label for="user-Rpasswd">Your Retry Password</label>
-                <input type="password" id="user-Rpasswd" placeholder="Retry password" name="rtrypassword">
+                <input type="password" id="user-Rpasswd" placeholder="Retry password" name="passwordRetry">
             </div>
 
             <button class="btn" type="submit">Create Account</button>
         </form>
+
+        {{#if message }}
+            <h4>{{message}}</h4>
+        {{/if}}
     </div>
 </body>
 </html>

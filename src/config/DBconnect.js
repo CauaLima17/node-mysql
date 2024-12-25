@@ -7,9 +7,9 @@ const dbConfig = {
     database: process.env.DATABASE || 'node_mysql'
 }
 
-const connection = mysql.createConnection(dbConfig);
+const dbConnection = mysql.createConnection(dbConfig);
 
-connection.connect((err) => {
+dbConnection.connect((err) => {
     if (err) {
         console.log('Erro na conexão com o banco: ', err.message);
     }
@@ -17,4 +17,4 @@ connection.connect((err) => {
     console.log('Conexão realizada com sucesso')
 });
 
-export default connection;
+export default dbConnection;

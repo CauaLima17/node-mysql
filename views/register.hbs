@@ -46,7 +46,7 @@
         </form>
 
         {{#if message }}
-            <h4>{{message}}</h4>
+            <h4 class="alert {{#if err}}error{{else}} success{{/if}}">{{message}}</h4>
         {{/if}}
     </div>
 </body>

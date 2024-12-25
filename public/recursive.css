@@ -37,3 +37,18 @@
 .btn:hover {
     background-color: rgb(204, 54, 0);
 }
+
+.alert {
+    margin-top: 24px;
+    padding: 20px;
+}
+
+.error {
+    color: rgb(117, 0, 0);
+    background-color: rgb(255, 104, 104);
+}
+
+.success {
+    color: rgb(0, 102, 5);
+    background-color: rgb(104, 255, 112);
+}

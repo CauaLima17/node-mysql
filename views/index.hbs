@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/header.css">
-    <link rel="stylesheet" href="/home.css">
-    <link rel="stylesheet" href="/recursive.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/recursive.css">
 </head>
 <body>
     <header class="header">
@@ -15,8 +15,8 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="{{#if user}}/logout{{else}}/login{{/if}}">{{#if user}}Logout{{else}}Login{{/if}}</a></li>
                 <li><a href="{{#if user}}/profile{{else}}/register{{/if}}">{{#if user}}Profile{{else}}Register{{/if}}</a></li>
+                <li><a href="{{#if user}}/logout{{else}}/login{{/if}}">{{#if user}}Logout{{else}}Login{{/if}}</a></li>
             </ul>
         </nav>
     </header>

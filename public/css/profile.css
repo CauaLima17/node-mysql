@@ -1,0 +1,36 @@
+.grid-container {
+    grid-template-columns: max-content 2fr;
+    gap: 48px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-name {
+    align-self: start;
+    margin-bottom: 8px;
+}
+
+.profile-img {
+    width: 50%;
+}
+
+.profile-posts {
+    text-align: center;
+    align-self: center;
+    padding: 16px;
+}
+
+.profile-posts h2 {
+    color: #6b6b6b;
+    font-size: 2rem;
+    margin-bottom: 48px;
+}

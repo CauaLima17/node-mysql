@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/header.css">
-    <link rel="stylesheet" href="/home.css">
-    <link rel="stylesheet" href="/recursive.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/recursive.css">
 </head>
 <body>
     <header class="header">
@@ -21,9 +21,23 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1 class="home-txt">{{#if user}}{{user.name}}! Welcome to your profile on NodeeMY.{{/if}}</h1>
-        <p class="home-pgy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illo expedita eaque natus quia error recusandae. Odio maxime voluptas dolore magni odit saepe excepturi sunt commodi necessitatibus.</p>
+    <div class="grid-container">
+        <div class="profile">
+            <img class="profile-img" src="/img/profile-img.jpg" alt="Profile Image">
+            <div>
+                <h2 class="profile-name">{{#if user}}{{user.name}}{{/if}}</h2>
+                <p class="profile-bio">
+                    Hi everyone. Welcome to my profile! 😄✨
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-posts">
+            <div>
+                <h2>You haven't posted anything yet 😞</h2>
+                <button class="btn">Post something! 🥳</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

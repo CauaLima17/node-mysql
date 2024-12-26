@@ -1,4 +1,5 @@
 import express from 'express';
+import isAuthenticated from '../middlewares/AuthMiddleware.js';
 
 const Routers = express.Router();
 
@@ -13,5 +14,21 @@ Routers.get('/register', (req, res) => {
 Routers.get('/login', (req, res) => {
     res.render('login');
 });
+
+Routers.get('/profile', isAuthenticated, (req, res) => {
+    res.render('profile', {
+        user: req.session.user
+    });
+});
+
+Routers.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.send('Erro ao fechar sessão: ', err);
+        }
+
+        res.redirect('/')
+    })
+})
 
 export default Routers;

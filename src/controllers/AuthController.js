@@ -64,6 +64,12 @@ const AuthController = {
                 });
             }
 
+            req.session.user = {
+                id: user.id,
+                name: user.name,
+                email: user.email
+            };
+
             return res.redirect('/');
         });
     }

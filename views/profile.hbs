@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/header.css">
     <link rel="stylesheet" href="/home.css">
@@ -15,15 +15,15 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
+                <li><a href="/profile">Profile</a></li>
                 <li><a href="{{#if user}}/logout{{else}}/login{{/if}}">{{#if user}}Logout{{else}}Login{{/if}}</a></li>
-                <li><a href="{{#if user}}/profile{{else}}/register{{/if}}">{{#if user}}Profile{{else}}Register{{/if}}</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
-        <h1 class="home-txt">{{#if user}}{{user.name}}! Welcome to NodeeMY.{{else}}Hey there! Welcome to NodeeMY.{{/if}}</h1>
-        <p class="home-pgy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illo expedita eaque natus quia error recusandae. Odio maxime voluptas dolore magni odit saepe excepturi sunt commodi necessitatibus, accusamus, optio provident. ipsum dolor sit amet consectetur adipisicing elit. Voluptas illo expedita eaque natus quia error recusandae.</p>
+        <h1 class="home-txt">{{#if user}}{{user.name}}! Welcome to your profile on NodeeMY.{{/if}}</h1>
+        <p class="home-pgy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illo expedita eaque natus quia error recusandae. Odio maxime voluptas dolore magni odit saepe excepturi sunt commodi necessitatibus.</p>
     </div>
 </body>
 </html>

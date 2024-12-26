@@ -24,18 +24,22 @@
     <div class="container">
         <h1 class="login-txt">Login on your account</h1>
 
-        <form class="form">
+        <form action="/auth/login" method="POST" class="form">
             <div>
                 <label for="user-email">Your E-mail</label>
                 <input type="email" id="user-email" placeholder="E-mail" name="email">
             </div>
             <div>
                 <label for="user-passwd">Your Password</label>
-                <input type="email" id="user-passwd" placeholder="Password" name="password">
+                <input type="password" id="user-passwd" placeholder="Password" name="password">
             </div>
 
             <button class="btn">Create Account</button>
         </form>
+
+        {{#if message }}
+            <h4 class="alert {{#if err}}error{{else}} success{{/if}}">{{message}}</h4>
+        {{/if}}
     </div>
 </body>
 </html>

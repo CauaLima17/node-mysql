@@ -4,8 +4,6 @@ import bcrypt from 'bcryptjs';
 
 const AuthController = {
     register(req, res){
-        console.log(req.body);
-
         const { name, email, password, passwordRetry } = req.body;
 
         dbConnection.query('SELECT email FROM users WHERE email = ?', [email], async (err, result) => {
@@ -26,7 +24,6 @@ const AuthController = {
             }
 
             let hashedPassword = await bcrypt.hash(password, 8);
-            console.log(hashedPassword);
 
             dbConnection.query('INSERT INTO users SET ?', {name: name, email: email, password: hashedPassword}, (err, results) => {
                 if (err) {
@@ -38,6 +35,36 @@ const AuthController = {
                     })
                 }
             });
+        });
+    },
+
+    login(req, res){
+        const { email, password } = req.body;
+
+        dbConnection.query('SELECT * FROM users WHERE email = ?', [email], async (err, results) => {
+            if (err) {
+                console.log(err)
+            };
+
+            if (results.length === 0) {
+                return res.render('login', {
+                    message: "That email does't exists. Please try another email or create an account.",
+                    err: true
+                });
+            }
+
+            const user = results[0];
+
+            const passwordMatch = await bcrypt.compare(password, user.password);
+
+            if (!passwordMatch) {
+                return res.render('login', {
+                    message: 'That password is incorrect. Try again',
+                    err: true
+                });
+            }
+
+            return res.redirect('/');
         });
     }
 };
